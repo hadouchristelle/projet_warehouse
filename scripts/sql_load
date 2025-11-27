@@ -1,0 +1,91 @@
+------ the code tht allow me to load the data on each table in the dababase
+
+----- I used Truncate to make sure that every table is empty
+
+----load the file in the table customer
+ USE DataWarehouse;
+
+ TRUNCATE TABLE  bronze.crm_customer;
+BULK INSERT bronze.crm_customer
+FROM 'C:\Users\USER\Downloads\f78e076e5b83435d84c6b6af75d8a679\sql-data-warehouse-project\datasets\source_crm\customer.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+---CHECK THE DATA IN THE TABLE: check that the data has not shiftted and is in the correct columns.    
+
+SELECT count(*) FROM bronze.crm_customer;
+
+---load the data in the bronze.crm_prodoc table
+
+TRUNCATE TABLE  bronze.crm_prodoc;
+
+BULK INSERT bronze.crm_prodoc
+FROM 'C:\Users\USER\Downloads\f78e076e5b83435d84c6b6af75d8a679\sql-data-warehouse-project\datasets\source_crm\prodoc.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+---CHECK THE DATA IN THE TABLE: check that the data has not shiftted and is in the correct columns.    
+
+SELECT* FROM bronze.crm_prodoc;
+
+-----load the data in the bronze.crm_sales
+
+TRUNCATE TABLE  bronze.crm_sales;
+BULK INSERT bronze.crm_sales
+FROM 'C:\Users\USER\Downloads\f78e076e5b83435d84c6b6af75d8a679\sql-data-warehouse-project\datasets\source_crm\ventes.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+---CHECK THE DATA IN THE TABLE: check that the data has not shiftted and is in the correct columns.    
+
+SELECT* FROM bronze.crm_customer;
+
+-----load the data in the bronze.epr_cust
+
+TRUNCATE TABLE  bronze.epr_cust;
+BULK INSERT bronze.epr_cust
+FROM 'C:\Users\USER\Downloads\f78e076e5b83435d84c6b6af75d8a679\sql-data-warehouse-project\datasets\source_erp\CUST.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+
+	---CHECK THE DATA IN THE TABLE: check that the data has not shiftted and is in the correct columns.    
+
+SELECT* FROM bronze.epr_cust;
+
+------load the data in the bronze.epr_cust
+TRUNCATE TABLE  bronze.epr_loc;
+BULK INSERT bronze.epr_loc
+FROM 'C:\Users\USER\Downloads\f78e076e5b83435d84c6b6af75d8a679\sql-data-warehouse-project\datasets\source_erp\LOC.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+
+	---CHECK THE DATA IN THE TABLE: check that the data has not shiftted and is in the correct columns.    
+
+SELECT* FROM bronze.epr_LOC;
+
+-----load the data in the bronze.epr_PX
+
+TRUNCATE TABLE  bronze.epr_px;
+BULK INSERT bronze.epr_px
+FROM 'C:\Users\USER\Downloads\f78e076e5b83435d84c6b6af75d8a679\sql-data-warehouse-project\datasets\source_erp\PX.csv'
+WITH(
+	FIRSTROW = 2,
+	FIELDTERMINATOR = ',',
+	TABLOCK
+	);
+
+	---CHECK THE DATA IN THE TABLE: check that the data has not shiftted and is in the correct columns.    
+
+SELECT* FROM bronze.epr_px
