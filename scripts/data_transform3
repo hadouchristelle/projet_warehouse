@@ -1,0 +1,12 @@
+use DataWarehouse
+
+insert into silver.epr_loc(cid,cntry)
+select 
+replace(cid,'-','') cid,
+CASE WHEN TRIM(cntry) = 'DE' THEN 'Germany'
+	when trim (cntry) in ('US', 'USA') THEN 'United States'
+	when trim (cntry) = '' or cntry IS NULL then 'n/a'
+	else trim(cntry)
+end as cntry
+
+from bronze.epr_loc;
