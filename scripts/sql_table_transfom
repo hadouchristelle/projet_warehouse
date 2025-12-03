@@ -1,0 +1,85 @@
+ USE DataWarehouse;
+
+IF OBJECT_ID ('silver.crm_customer', 'u')  IS NOT NULL
+	DROP TABLE bronze.crm_customer;
+
+CREATE TABLE silver.crm_customer(
+cst_id INT,
+cst_key NVARCHAR(50),
+cst_firstname NVARCHAR(50),
+cst_lastname NVARCHAR(50),
+cst_material_status NVARCHAR(50),
+cst_gndr NVARCHAR(50),
+cst_create_date DATE,
+dwh_create_date DATETIME2 DEFAULT GETDATE()
+);
+
+
+
+IF OBJECT_ID ('silver.crm_prodoc', 'u')  IS NOT NULL
+	DROP TABLE silver.crm_prodoc ;
+
+CREATE TABLE silver.crm_prodoc(
+prd_id INT,
+cat_id NVARCHAR(50),
+prd_key NVARCHAR(50),
+prd_nm NVARCHAR(50),
+prd_cost INT,
+prd_line NVARCHAR(50),
+prd_start_dt DATE,
+prd_end_dt DATE,
+dwh_create_date DATETIME2 DEFAULT GETDATE()
+);
+USE DataWarehouse;
+
+IF OBJECT_ID ('silver.crm_sales', 'u')  IS NOT NULL
+	DROP TABLE silver.crm_sales;
+
+CREATE TABLE silver.crm_sales(
+sls_ord_num VARCHAR(50),
+sls_prd_key NVARCHAR(50),
+sls_cust_id INT,
+sls_order_dt DATE,
+sls_ship_dt DATE,
+sls_due_dt DATE,
+sls_sales INT,
+sls_quantity INT,
+sls_price INT,
+dwh_create_date DATETIME2 DEFAULT GETDATE()
+);
+ALTER TABLE silver.crm_sales
+ALTER COLUMN sls_ord_num VARCHAR(50);
+
+
+IF OBJECT_ID ('silver.epr_loc', 'u')  IS NOT NULL
+	DROP TABLE silver.epr_loc;
+
+CREATE TABLE silver.epr_loc(
+cid NVARCHAR(50),
+cntry NVARCHAR(50),
+dwh_create_date DATETIME2 DEFAULT GETDATE()
+ );
+
+ 
+IF OBJECT_ID ('silver.epr_cust', 'u')  IS NOT NULL
+	DROP TABLE silver.epr_cust;
+
+ CREATE TABLE silver.epr_cust(
+cid NVARCHAR(50),
+bdate DATE,
+gen NVARCHAR(50),
+dwh_create_date DATETIME2 DEFAULT GETDATE()
+);
+
+
+IF OBJECT_ID ('silver.epr_px', 'u')  IS NOT NULL
+	DROP TABLE silver.epr_px;
+
+CREATE TABLE silver.epr_px(
+id NVARCHAR(50),
+cat NVARCHAR(50),
+subcat NVARCHAR(50 ),
+maintenance NVARCHAR(50),
+dwh_create_date DATETIME2 DEFAULT GETDATE()
+);
+
