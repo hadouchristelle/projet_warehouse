@@ -1,3 +1,9 @@
+=====================================================
+Script Purpose:
+	This script normalize and Handle missing or blank country codes
+	loading the data transformation in  silver.epr_loc table
+
+
 use DataWarehouse
 
 insert into silver.epr_loc(cid,cntry)
