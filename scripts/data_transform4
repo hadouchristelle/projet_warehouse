@@ -1,0 +1,22 @@
+ =====================================
+  Script Purpose:
+        This script  check unwanted spaces in all the table 
+        they is not transformation to make on this table  because all are  good
+SELECT*
+FROM bronze.epr_px
+where cat!= TRIM (cat) or subcat!= TRIM(subcat) or maintenance!= TRIM(maintenance);
+
+---- data standardization 
+select distinct cat
+FROM bronze.epr_px
+
+-----------
+
+INSERT INTO silver.epr_px( id, cat, subcat, maintenance)
+
+select
+id,
+cat,
+subcat,
+maintenance
+from bronze.epr_px 
