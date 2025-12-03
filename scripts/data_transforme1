@@ -1,3 +1,9 @@
+======================================================================
+Script Purpose:
+	This script recalculate sales if original value is missing or incorrect
+	Derive price if original value is invalid
+	check for invalide dates
+	insert the data transformation  in the silver.crm_sales tables
 use DataWarehouse;
 
 ------- check for invalide dates
