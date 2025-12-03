@@ -1,4 +1,12 @@
+===================================================================
+Script Purpose:
+		this script remove 'NAS' prefix if present
+		Set future birthdates to NULL
+		Normalize gender values and handle unknown cases
+		loading the data transformation silver.epr_cus
+
 USE DataWarehouse;
+
  insert into silver.epr_cust( cid,bdate,gen)
 
 select 
