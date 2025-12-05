@@ -33,11 +33,14 @@ In the Silver layer, data is cleaned, standardized, normalized, and enriched to 
 <img width="1723" height="853" alt="image" src="https://github.com/user-attachments/assets/5ecb86e7-0d17-41f5-a51e-50a41c018ee9" />
 ##### a-2.2 transformation in the bronze.crm_prodoc and load the data into the silver.crm_prodoc
 <img width="1881" height="738" alt="image" src="https://github.com/user-attachments/assets/eb15e15a-f5c3-4ef8-ab0c-a528c8fd5e04" />
-
-##### a-2.3 transformation in the bronze.crm_sales and load the data into the silver.sales
+##### a-2.3 transformation in the bronze.crm_sales and load the data into the silver.crm_sales
 <img width="1898" height="847" alt="image" src="https://github.com/user-attachments/assets/82fa579c-bff1-4eaa-972c-511a1ad1e88b" />
-
-
+##### a-2.4 transformation in the bronze.epr_cust and load the data into the silver.epr_cust
+<img width="1876" height="767" alt="image" src="https://github.com/user-attachments/assets/a1f0e211-00f5-4884-aaf9-68f7a92eba56" />
+##### a-2.5 transformation in the bronze.epr_loc and load the data into the silver.epr_loc
+<img width="1787" height="587" alt="image" src="https://github.com/user-attachments/assets/9ca9faa1-bdb1-48bf-82ca-0b68e440e17a" />
+##### a-2.6  transformation in the bronze.epr_px and load the data into the silver.epr_px
+<img width="1912" height="777" alt="image" src="https://github.com/user-attachments/assets/d39f53e6-a467-4119-98b8-e9cb58212fae" />
 
 
 
