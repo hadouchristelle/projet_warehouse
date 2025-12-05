@@ -43,9 +43,12 @@ In the Silver layer, data is cleaned, standardized, normalized, and enriched to 
 		remove 'NAS' prefix if present
 		Set future birthdates to NULL
 		Normalize gender values and handle unknown cases
-		loading the data transformation silver.epr_cus
+		loading the data transformation silver.epr_cust
 <img width="1876" height="767" alt="image" src="https://github.com/user-attachments/assets/a1f0e211-00f5-4884-aaf9-68f7a92eba56" />
 ##### a-2.5 transformation in the bronze.epr_loc and load the data into the silver.epr_loc
+	normalize and Handle missing or blank country codes
+	loading the data transformation in  silver.epr_loc table
+
 <img width="1787" height="587" alt="image" src="https://github.com/user-attachments/assets/9ca9faa1-bdb1-48bf-82ca-0b68e440e17a" />
 ##### a-2.6  transformation in the bronze.epr_px and load the data into the silver.epr_px
 <img width="1912" height="777" alt="image" src="https://github.com/user-attachments/assets/d39f53e6-a467-4119-98b8-e9cb58212fae" />
