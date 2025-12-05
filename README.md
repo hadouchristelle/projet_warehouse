@@ -26,7 +26,7 @@ Data from CRM and ERP folders containing CSV files are ingested into the Bronze 
 
 #### 2. Make the transformations and cleaning, and load the data into the silver layer.
 In the Silver layer, data is cleaned, standardized, normalized, and enriched to ensure its quality and consistency.
-##### a.2.1 Transformation in the bronze.crm_customer and load the data into the silver.crm_customer table
+##### a-2.1 Transformation in the bronze.crm_customer and load the data into the silver.crm_customer table
         -Normalize marital status values to readable format
         -Normalize gender values to readable format
         -renove unwanted space
@@ -34,6 +34,10 @@ In the Silver layer, data is cleaned, standardized, normalized, and enriched to 
 ##### a-2.2 transformation in the bronze.crm_prodoc and load the data into the silver.crm_prodoc
 <img width="1881" height="738" alt="image" src="https://github.com/user-attachments/assets/eb15e15a-f5c3-4ef8-ab0c-a528c8fd5e04" />
 ##### a-2.3 transformation in the bronze.crm_sales and load the data into the silver.crm_sales
+        recalculate sales if original value is missing or incorrect
+	Derive price if original value is invalid
+	check for invalide dates
+	insert the data transformation  in the silver.crm_sales tables
 <img width="1898" height="847" alt="image" src="https://github.com/user-attachments/assets/82fa579c-bff1-4eaa-972c-511a1ad1e88b" />
 ##### a-2.4 transformation in the bronze.epr_cust and load the data into the silver.epr_cust
 <img width="1876" height="767" alt="image" src="https://github.com/user-attachments/assets/a1f0e211-00f5-4884-aaf9-68f7a92eba56" />
