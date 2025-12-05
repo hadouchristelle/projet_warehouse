@@ -51,7 +51,9 @@ In the Silver layer, data is cleaned, standardized, normalized, and enriched to 
 
 <img width="1787" height="587" alt="image" src="https://github.com/user-attachments/assets/9ca9faa1-bdb1-48bf-82ca-0b68e440e17a" />
 ##### a-2.6  transformation in the bronze.epr_px and load the data into the silver.epr_px
+		they are not transformation to make on this table  because all are  good
 <img width="1912" height="777" alt="image" src="https://github.com/user-attachments/assets/d39f53e6-a467-4119-98b8-e9cb58212fae" />
 
 
+####
 
