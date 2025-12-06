@@ -56,10 +56,14 @@ In the Silver layer, data is cleaned, standardized, normalized, and enriched to 
 
 
 #### 3.The Gold layer exposes data ready for analysis, in the form of views, by applying  the transformations such as data integration, aggregations, and business logic.
-##### a-3.1 Since the silver.epr_cust and silver.epr_loc tables both have a foreign key derived from the main silver.crm_customer table, we need to join these three tables to consolidate the additional information and build a unified view.
+##### a-3.1:
+	Since the silver.epr_cust and silver.epr_loc tables both have a foreign key derived from the main silver.crm_customer table, we need to join these three tables to consolidate the additional information and build a unified view.
 This view allows us to enrich customer data (personal characteristics, location, etc.) and provides a clean and usable model for analysis.
 <img width="1882" height="812" alt="image" src="https://github.com/user-attachments/assets/57ab111e-da0a-40d4-b7af-887cca7e293b" />
-##### a-3.2The script creates a view called gold.dim_product, which represents the product dimension.
+##### a-3.2: 
+	The script creates a view called gold.dim_product, which represents the product dimension.
 It retrieves the main product information from the silver.crm_prodoc (pn) table and enriches it with category information from the silver.epr_px (pc) table using a LEFT JOIN on the cat_id key.A product_key column is generated using ROW_NUMBER().
 <img width="1805" height="703" alt="image" src="https://github.com/user-attachments/assets/c9816d86-ec0e-4110-a2f2-770e3de2bdaa" />
 
+##### a-3.3:
+<img width="1885" height="747" alt="image" src="https://github.com/user-attachments/assets/d40b2097-f6c8-4e77-a196-e74c972cc1f4" />
