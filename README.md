@@ -70,7 +70,7 @@ It retrieves the main product information from the silver.crm_prodoc (pn) table 
 #### Data  Schema and flow diagram
 #### a- Data schema
 <img width="1336" height="726" alt="Screenshot 2026-01-05 181959" src="https://github.com/user-attachments/assets/76b06520-0bfb-445d-9dec-e230d003cbeb" />
-#### b- data flow
+## b- data flow
 <img width="1213" height="526" alt="image" src="https://github.com/user-attachments/assets/6882d16b-9191-4f92-b9ff-6fb00ff4f39f" />
 
 
